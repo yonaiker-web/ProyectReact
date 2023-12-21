@@ -1,4 +1,4 @@
-import { useGlobalStatae } from "../context/GlobalState";
+import { useGlobalStatae } from "./context/GlobalState";
 
 const Balance = () => {
   //obtenemos la funcion que nos devuelve el contexto

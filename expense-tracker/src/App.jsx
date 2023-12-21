@@ -1,8 +1,9 @@
 import React from "react";
-import { GlobalProvider } from "./context/GlobalState";
+import { GlobalProvider } from "./components/context/GlobalState";
 import Header from "./components/Header";
 import Balance from "./components/Balance";
 import TransactionForm from "./components/TransactionForm";
+import "./App.css";
 
 const App = () => {
   return (
