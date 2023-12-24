@@ -2,7 +2,7 @@ import React from "react";
 
 const Testimonio = (props) => {
   return (
-    <div className="w-[60%] p-4 content-start">
+    <div className="w-[100%] p-4 content-start">
       <div className="card card-side bg-base-100 shadow-xl">
         <figure className="w-[50%] shrink-0">
           <img
