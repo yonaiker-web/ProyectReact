@@ -1,11 +1,22 @@
 import React, { useState } from "react";
+import { useGlobalStatae } from "../context/GlobalState";
 
 const TransactionForm = () => {
+  //traemos la funcion addTransaction del useGlobalState que es el contexto global
+  const { addTransaction } = useGlobalStatae();
   const [description, setDescription] = useState();
   const [amount, setAmount] = useState(0);
 
   const onSubmit = (e) => {
     e.preventDefault();
+
+    //le pasamos a la funcion estos valores para ejecutarlos en el useGlobalStatae
+    addTransaction({
+      id: 1,
+      description,
+      amount,
+    });
+
     console.log("description", description);
     console.log("amount", amount);
   };

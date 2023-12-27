@@ -17,9 +17,22 @@ export const useGlobalStatae = () => {
 };
 
 export const GlobalProvider = ({ children }) => {
+  //usaremos useReducer para crear funciones que actulicen el estado global, esto es muy parecido a un useState solo que le pasamos "AppReducer" que es el archivo que va a tner la logica  y el "initialState" que es el estado inicial
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
+  const addTransaction = (transaction) => {
+    //en esta funcion le pasamos el dispatch que activa una accion de type, y el payload que es el contenido que en este caso es un objeto transaction que tiene description y monto
+    dispatch({
+      type: "ADD_TRANSACTION",
+      payload: transaction,
+    });
+  };
   return (
-    <Context.Provider value={state.transactions}>{children}</Context.Provider>
+    <Context.Provider
+      //el value no solo sirve para pasar valores sino funciones
+      value={{ transactions: state.transactions, addTransaction }}
+    >
+      {children}
+    </Context.Provider>
   );
 };

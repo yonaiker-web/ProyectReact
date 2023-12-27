@@ -2,8 +2,8 @@ import React from "react";
 import { GlobalProvider } from "./components/context/GlobalState";
 import Header from "./components/Header";
 import Balance from "./components/Balance";
-import TransactionForm from "./components/TransactionForm";
 import "./App.css";
+import TransactionForm from "./components/transactions/TransactionForm";
 
 const App = () => {
   return (
