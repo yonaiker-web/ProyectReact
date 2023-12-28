@@ -12,7 +12,8 @@ const TransactionForm = () => {
 
     //le pasamos a la funcion estos valores para ejecutarlos en el useGlobalStatae
     addTransaction({
-      id: 1,
+      //window.crypto.randomUUID() genera un guid
+      id: window.crypto.randomUUID(),
       description,
       amount,
     });

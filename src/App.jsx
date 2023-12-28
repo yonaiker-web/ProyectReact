@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Balance from "./components/Balance";
 import "./App.css";
 import TransactionForm from "./components/transactions/TransactionForm";
+import Transaction_List from "./components/transactions/Transaction_List";
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <Header />
       <Balance />
       <TransactionForm />
+      <Transaction_List />
       <h1>Hola</h1>
     </GlobalProvider>
   );

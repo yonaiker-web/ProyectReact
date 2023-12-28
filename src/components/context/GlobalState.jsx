@@ -27,10 +27,24 @@ export const GlobalProvider = ({ children }) => {
       payload: transaction,
     });
   };
+
+  const deleteTransaction = (id) => {
+    //en esta funcion le pasamos el dispatch que activa una accion de type, y el payload que es el contenido que en este caso es un objeto transaction que tiene description y monto
+    dispatch({
+      type: "DELETE_TRANSACTION",
+      payload: id,
+    });
+  };
+
   return (
     <Context.Provider
       //el value no solo sirve para pasar valores sino funciones
-      value={{ transactions: state.transactions, addTransaction }}
+      //transactions es la variable global que contiene el to global
+      value={{
+        transactions: state.transactions,
+        addTransaction,
+        deleteTransaction,
+      }}
     >
       {children}
     </Context.Provider>
