@@ -15,7 +15,8 @@ const TransactionForm = () => {
       //window.crypto.randomUUID() genera un guid
       id: window.crypto.randomUUID(),
       description,
-      amount,
+      //el simbolo del + convierte todo lo que este en ese campo a un numero entero
+      amount: +amount,
     });
 
     console.log("description", description);
