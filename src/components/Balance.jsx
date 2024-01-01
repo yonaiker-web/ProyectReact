@@ -8,13 +8,22 @@ const Balance = () => {
   const { transactions } = useGlobalStatae();
 
   //extraemos es un arreglo solo los montos de las transacciones
-  const amount = transactions.map((transaction) => transaction.amount);
+  const amounts = transactions.map((transaction) => transaction.amount);
 
-  const total = amount.reduce((acc, item) => (acc += item), 0);
+  //calculamos la suma total de todos los montos
+  const total = amounts.reduce((acc, item) => (acc += item), 0);
 
   return (
-    <div>
-      <h1>Balance: {total}</h1>
+    <div className="px-4">
+      {/* {JSON.stringify(amounts, null, 2)} */}
+      <h1>
+        Tu Balance:
+        <div className="stats shadow">
+          <div className="stat">
+            <div className="stat-value">$ {total}</div>
+          </div>
+        </div>
+      </h1>
     </div>
   );
 };

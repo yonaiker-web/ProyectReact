@@ -10,7 +10,7 @@ const Transaction_List = () => {
 
   return (
     <div>
-      <div className="w-[600px]">
+      <div className="px-4 w-[80%]">
         <table className="table">
           <thead>
             <tr>

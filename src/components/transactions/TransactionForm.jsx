@@ -18,13 +18,10 @@ const TransactionForm = () => {
       //el simbolo del + convierte todo lo que este en ese campo a un numero entero
       amount: +amount,
     });
-
-    console.log("description", description);
-    console.log("amount", amount);
   };
   return (
-    <div className="w-full max-w-xs">
-      <form className="max-w-sm mx-auto" onSubmit={onSubmit}>
+    <div className="text-center px-4">
+      <form className="max-w-sm" onSubmit={onSubmit}>
         <div className="grid gap-6 mb-6 md:grid-cols-2">
           <div>
             <label
