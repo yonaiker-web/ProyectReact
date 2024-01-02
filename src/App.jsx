@@ -12,8 +12,8 @@ const App = () => {
     //englobamos todo lo demas en el GlobalProvider para que todo los children compartan la misma informacion
     <GlobalProvider>
       <div className="p-10  ">
-        <div className="p-5  bg-slate-800 rounded-3xl flex gap-4  justify-between items-center">
-          <div className="Descripcion">
+        <div className="p-5  bg-slate-800 rounded-3xl flex gap-4  justify-between ">
+          <div className="">
             <Header />
             <Balance />
             <TransactionForm />
