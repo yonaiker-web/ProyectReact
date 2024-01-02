@@ -20,15 +20,15 @@ const TransactionForm = () => {
     });
   };
   return (
-    <div className="text-center px-4">
-      <form className="max-w-sm" onSubmit={onSubmit}>
-        <div className="grid gap-6 mb-6 md:grid-cols-2">
+    <div className="text-center  mt-10">
+      <form className="" onSubmit={onSubmit}>
+        <div className="grid gap-6 mb-6 md:grid-cols-3 items-end">
           <div>
             <label
               htmlFor="first_name"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              First name
+              Descripcion
             </label>
             <input
               type="text"
@@ -44,7 +44,7 @@ const TransactionForm = () => {
               htmlFor="number-input"
               className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
             >
-              Select a number:
+              Monto:
             </label>
             <input
               type="number"
@@ -58,7 +58,7 @@ const TransactionForm = () => {
             />
           </div>
 
-          <button className="btn btn-primary">Primary</button>
+          <button className="btn btn-primary">Agregar</button>
         </div>
       </form>
     </div>

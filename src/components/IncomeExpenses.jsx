@@ -1,5 +1,6 @@
 import React from "react";
 import { useGlobalStatae } from "./context/GlobalState";
+import Stat from "./Stat";
 
 const IncomeExpenses = () => {
   //traemos el estado glboal
@@ -11,22 +12,25 @@ const IncomeExpenses = () => {
   //guardamos y sumamos solo los montos mayores a 0
   const income = amounts
     .filter((item) => item > 0)
-    .reduce((acc, item) => (acc += item), 0);
+    .reduce((acc, item) => (acc += item), 0)
+    .toFixed(2);
 
   //guardamos y sumamos solo los gatos o montos menores a 0
   const expenses =
-    amounts.filter((item) => item < 0).reduce((acc, item) => (acc += item), 0) *
-    -1;
+    amounts
+      .filter((item) => item < 0)
+      .reduce((acc, item) => (acc += item), 0)
+      .toFixed(2) * -1;
 
   return (
-    <div className="p-4">
+    <div className=" flex gap-8 justify-between">
       <div className="">
         <h4>Ingreso Total</h4>
-        <p>$ {income}</p>
+        <Stat>{income}</Stat>
       </div>
       <div className="">
         <h4>Gatos Total</h4>
-        <p>$ {expenses}</p>
+        <Stat>{expenses}</Stat>
       </div>
     </div>
   );

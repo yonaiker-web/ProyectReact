@@ -1,16 +1,13 @@
 import React, { useState } from "react";
 import { useGlobalStatae } from "../context/GlobalState";
+import Transaction_Item from "./Transaction_Item";
 
 const Transaction_List = () => {
-  const { transactions, deleteTransaction } = useGlobalStatae();
-
-  const deleteTransactionId = (id) => {
-    deleteTransaction(id);
-  };
+  const { transactions } = useGlobalStatae();
 
   return (
     <div>
-      <div className="px-4 w-[80%]">
+      <div className=" ">
         <table className="table">
           <thead>
             <tr>
@@ -22,19 +19,10 @@ const Transaction_List = () => {
           </thead>
           <tbody>
             {transactions.map((transaction) => (
-              <tr key={transaction.id}>
-                <th>{transaction.id}</th>
-                <td>{transaction.description}</td>
-                <td>{transaction.amount}</td>
-                <td>
-                  <button
-                    className="btn btn-error"
-                    onClick={() => deleteTransactionId(transaction.id)}
-                  >
-                    Eliminar
-                  </button>
-                </td>
-              </tr>
+              <Transaction_Item
+                transaction={transaction}
+                key={transaction.id}
+              />
             ))}
           </tbody>
         </table>
