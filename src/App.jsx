@@ -5,7 +5,7 @@ import Balance from "./components/Balance";
 import "./App.css";
 import TransactionForm from "./components/transactions/TransactionForm";
 import Transaction_List from "./components/transactions/Transaction_List";
-import IncomeExpenses from "./components/IncomeExpenses";
+import ExpenseChart from "./components/ExpenseChart";
 
 const App = () => {
   return (
@@ -21,6 +21,7 @@ const App = () => {
           <div className="divider divider-horizontal"></div>
 
           <div className="">
+            <ExpenseChart />
             <Transaction_List />
           </div>
         </div>

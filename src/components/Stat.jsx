@@ -1,6 +1,6 @@
 import React from "react";
 
-const Stat = ({ children }) => {
+const Stat = ({ children, styleText }) => {
   return (
     <div className="my-1 stats shadow ">
       <div className="stat p-2">

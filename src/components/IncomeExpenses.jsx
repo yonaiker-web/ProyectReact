@@ -26,11 +26,11 @@ const IncomeExpenses = () => {
     <div className=" flex gap-8 justify-between">
       <div className="">
         <h4>Ingreso Total</h4>
-        <Stat>{income}</Stat>
+        <Stat styleText={"text-primary"}>{income}</Stat>
       </div>
       <div className="">
         <h4>Gatos Total</h4>
-        <Stat>{expenses}</Stat>
+        <Stat styleText={`text-color:black`}>{expenses}</Stat>
       </div>
     </div>
   );
